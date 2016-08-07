@@ -1,4 +1,4 @@
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: statuspage
@@ -7,7 +7,7 @@ package:
 source:
   fn: python-statuspage-{{ version }}.tar.gz
   url: https://github.com/jayfk/statuspage/archive/{{ version }}.tar.gz
-  sha256: 121d0d4a7dae61275ff53ac9ac55c91942eea6ecac12ee825d545155428c573c
+  sha256: 0a8ef33ac23efb6087a918a24cfc302482e14a72ed8bf547fcd0995e1bda5754
 
 build:
   number: 0
