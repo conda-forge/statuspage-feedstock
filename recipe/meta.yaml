@@ -11,7 +11,7 @@ source:
   sha256: 6649b40d41dc97c17dc6a0ab46bf4d10c88043ed3eb536c692997731f91a2cc9
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record=record.txt
   preserve_egg_dir: True
   entry_points:
