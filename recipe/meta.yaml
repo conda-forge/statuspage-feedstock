@@ -1,33 +1,33 @@
+{% set name = "statuspage" %}
 {% set version = "0.5.1" %}
 
 package:
-  name: statuspage
+  name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: python-statuspage-{{ version }}.tar.gz
-  url: https://github.com/jayfk/statuspage/archive/{{ version }}.tar.gz
-  sha256: 0a8ef33ac23efb6087a918a24cfc302482e14a72ed8bf547fcd0995e1bda5754
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 6649b40d41dc97c17dc6a0ab46bf4d10c88043ed3eb536c692997731f91a2cc9
 
 build:
-  number: 0
-  skip: true  # [win or py3k]
+  number: 1
+  script: python setup.py install --single-version-externally-managed --record=record.txt
+  preserve_egg_dir: True
+  entry_points:
+    - statuspage=statuspage.statuspage:cli
 
 requirements:
   build:
-    - curl
     - python
-    - openssl
     - setuptools
-    - packaging
-    - pyinstaller
+
+  run:
+    - python
+    - pygithub
     - click
     - jinja2
     - tqdm
-    - six
-
-  run:
-    - ca-certificates
 
 test:
   commands:
