@@ -1,5 +1,5 @@
 {% set name = "statuspage" %}
-{% set version = "0.5.1" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name }}
@@ -8,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6649b40d41dc97c17dc6a0ab46bf4d10c88043ed3eb536c692997731f91a2cc9
+  sha256: 2b3702e4013457f7e6b069b88c68dcee37ef6961e6cec963a6b4afc0dd6303e4
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
   preserve_egg_dir: True
   entry_points:
@@ -28,6 +28,7 @@ requirements:
     - click
     - jinja2
     - tqdm
+    - requests
 
 test:
   commands:
@@ -36,6 +37,7 @@ test:
 about:
   home: https://github.com/jayfk/statuspage
   license: MIT
+  license_family: MIT
   summary: A statuspage generator that lets you host your statuspage for free on Github.
 
 extra:
