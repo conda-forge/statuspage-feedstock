@@ -1,5 +1,5 @@
 {% set name = "statuspage" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2b3702e4013457f7e6b069b88c68dcee37ef6961e6cec963a6b4afc0dd6303e4
+  sha256: 354099766678b001a09b9950849acac23152aa4a4bc0f7e62949ca9df4dd331f
 
 build:
   number: 0
@@ -29,6 +29,7 @@ requirements:
     - jinja2
     - tqdm
     - requests
+    - markdown2
 
 test:
   commands:
