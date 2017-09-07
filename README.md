@@ -14,9 +14,7 @@ Summary: A statuspage generator that lets you host your statuspage for free on G
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/statuspage-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/statuspage-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/statuspage-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/statuspage-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/statuspage-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/statuspage-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/statuspage-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/statuspage-feedstock)
 
 Current release info
 ====================

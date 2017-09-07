@@ -11,11 +11,12 @@ source:
   sha256: 4eb5f3bc2ea33f59f0b42c9cd2ef6c909e09069b7c96a71dae32f72dab068b02
 
 build:
-  number: 0
+  number: 1
+  noarch: python
   script: python setup.py install --single-version-externally-managed --record=record.txt
   preserve_egg_dir: True
   entry_points:
-    - statuspage=statuspage.statuspage:cli
+    - statuspage = statuspage.statuspage:cli
 
 requirements:
   build:
