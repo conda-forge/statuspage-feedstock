@@ -16,7 +16,7 @@ build:
   script: python setup.py install --single-version-externally-managed --record=record.txt
   preserve_egg_dir: True
   entry_points:
-    - statuspage=statuspage.statuspage:cli
+    - statuspage = statuspage.statuspage:cli
 
 requirements:
   build:
